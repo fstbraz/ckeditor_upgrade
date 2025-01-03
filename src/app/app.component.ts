@@ -120,7 +120,6 @@ export class AppComponent implements AfterViewInit {
   public config: EditorConfig = {}; // CKEditor needs the DOM tree before calculating the configuration.
   public ngAfterViewInit(): void {
     this.config = {
-      licenseKey: "",
       toolbar: {
         items: [
           "insertMergeField",
