@@ -483,9 +483,6 @@ export class AppComponent implements AfterViewInit {
     this.editorWordCount.nativeElement.appendChild(
       wordCount.wordCountContainer
     );
-    this.editorMenuBar.nativeElement.appendChild(
-      editor.ui.view.menuBarView.element!
-    );
   }
 }
 
