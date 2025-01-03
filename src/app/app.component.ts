@@ -99,12 +99,6 @@ import {
  */
 const LICENSE_KEY = "<YOUR_LICENSE_KEY>";
 
-/**
- * Please update the following values with your tokens.
- * Instructions on how to obtain them: https://ckeditor.com/docs/trial/latest/guides/real-time/quick-start.html
- */
-const CLOUD_SERVICES_TOKEN_URL = "<YOUR_CLOUD_SERVICES_TOKEN_URL>";
-
 @Component({
   selector: "app-root",
   standalone: true,
@@ -244,9 +238,6 @@ export class AppComponent implements AfterViewInit {
         Underline,
         WordCount
       ],
-      cloudServices: {
-        tokenUrl: CLOUD_SERVICES_TOKEN_URL
-      },
       exportPdf: {
         stylesheets: [
           /* This path should point to application stylesheets. */
@@ -529,15 +520,6 @@ function configUpdateAlert(config: any) {
 
   if (!isModifiedByUser(config.licenseKey, "<YOUR_LICENSE_KEY>")) {
     valuesToUpdate.push("LICENSE_KEY");
-  }
-
-  if (
-    !isModifiedByUser(
-      config.cloudServices?.tokenUrl,
-      "<YOUR_CLOUD_SERVICES_TOKEN_URL>"
-    )
-  ) {
-    valuesToUpdate.push("CLOUD_SERVICES_TOKEN_URL");
   }
 
   if (valuesToUpdate.length) {
